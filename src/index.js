@@ -34,9 +34,6 @@ app.get("/validate-meeting", function (req, res) {
    * Specified Meeting ID is valid.
    * https://www.metered.ca/docs/rest-api/get-room-api
    */
-
-  res.cookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true})
-
   var options = {
     method: "GET",
     url:
@@ -105,9 +102,6 @@ app.post("/create-meeting-room", function (req, res) {
 });
 
 app.get("/metered-domain", function (req, res) {
-
-  res.cookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true})
-  
   res.send({
     domain: config.METERED_DOMAIN,
   });
